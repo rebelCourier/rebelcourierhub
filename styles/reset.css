@@ -1,3 +1,14 @@
+/* Global Colors Palette */
+:root {
+    --mediumdark-red: #a40202;
+    --chrome-gold: #BBA53D;
+}
+
+/* Global Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Box sizing rules */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -7,6 +18,7 @@
 * {
     margin: 0;
     padding: 0;
+    border-radius: 0;
 }
 
 /* Set default font inheritance */

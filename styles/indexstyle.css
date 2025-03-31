@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'RacingSansOne';
+    src: url(../baseassets/fonts/RacingSansOne-Regular.ttf) format('truetype');
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+.logo {
+    color: var(--mediumdark-red);
+    font-size: 25px;
+    font-family: 'RacingSansOne';
+    padding-left: 40px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.logo:hover {
+    color: var(--chrome-gold);
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-right: 30px;
+}
+
+.navlinks li {
+    margin: 0px 15px;
+}
+
+.navlinks li a {
+    color: var(--mediumdark-red);
+    text-decoration: none;
+    font-family: 'RacingSansOne';
+}
+
+.navlinks li a:hover {
+    color: var(--chrome-gold);
+}
+
+#home {
+    background: url(../baseassets/background-photos/homepgbg.svg) no-repeat center center;
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home .home-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+#home .motto {
+    padding-left: 100px;
+    font-family: 'RacingSansOne';
+    font-size: xx-large;
+    padding-top: 100px;
+}
+
+#home .rclogo {
+    align-items: right;
+    max-width: 350px;
+    height: auto;
+    padding-top: 100px;
+}
