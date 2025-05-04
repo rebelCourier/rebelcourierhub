@@ -251,7 +251,7 @@ header {
         right: 0;
         padding: 0;
         gap: 1rem;
-        border-bottom-left-radius: 25px;
+        border-bottom-left-radius: 20px;
     }
 
     .navlinks.active {
@@ -344,9 +344,8 @@ header {
     #footer-container .legal .policies {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         width: 100vw;
-        padding: 15px 20px;
+        padding: 15px 40px;
         font-family: 'RacingSansOne';
         color: var(--mediumdark-red);
         font-size: small;
