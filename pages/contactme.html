@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <title>Contact Me</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Rebel Courier is a dynamic platform showcasing the multifaceted work of a full-stack web developer, freelance programmer, content creator, and social organizer based in Atlanta. From cutting-edge web design and coding projects to amateur photography, political activism, cycling culture, and entrepreneurial ventures, this site connects all aspects of a revolutionary mindset. Stay inspired, stay creative, and stay revolutionary.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Stylesheets & Favicon -->
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/contactmestyle.css">
+    <link rel="icon" type="image/svg+xml" href="baseassets/icons/favicon.svg">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <!-- Website Name on the Left -->
+            <div class="logo">
+                <a href="/index.html">Rebel Courier Hub</a>
+            </div>
+
+            <!-- Page Options on the Right -->
+            <ul class="navlinks">
+                <li><a href="#" style="display: none;">About Me</a></li>
+                <li><a href="#">Portfolio </a></li>
+                <li><a href="#">Photography</a></li>
+                <li><a href="#">Socials</a></li>
+                <li><a href="/pages/contactme.html">Contact Me</a></li>
+            </ul>
+            <button class=hamburger aria-label="Toggle menu">
+                ☰
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="contact_section">
+            <h2>Contact Me</h2>
+            <form class="contact_form">
+                <label for="email" id="your-email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
+                <textarea name="message" id="message" rows="5" placeholder="Enter your message here..." required></textarea>
+                <button id="send-message">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Footer Content -->
+        <footer>
+            <div id="footer-container">
+                <section class="footer-logo">
+                    <a href="/index.html"><img src="/baseassets/elements/rc_red.svg" alt="red"></a>
+                </section>
+                <section class="tldr">
+                    <h3>TL;DR</h3>
+                    <p>Rebel Courier is a platform that showcases my diverse journey as a<br>freelance programmer, full-stack web developer, content creator, engineer,<br>and social organizer. I'm constantly evolving through coding projects,<br>cycling in Atlanta, and activism. This space connects you to my work in design,<br>development, music, and more, driven by a commitment to growth,<br>self-expression, and uplifting the Black community.</p>
+                </section>
+            
+                <section class="legal">
+                    <div class="policies">
+                        <h4 class="privacy"><a href="#">Privacy Policy</a></h4>
+                        <h4 class="terms"><a href="#">Terms of Service</a></h4>
+                        <h4 class="cookie"><a href="#">Cookie Policy</a></h4>
+                    </div>
+                    <h4 class="copyright">&copy; 2025 Rebel Courier - Eternal Visions. All Rights Reserved.</h4>
+                </section>
+            </div>
+        </footer>
+    </main>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".navlinks");
+    const navBar = document.querySelector("#navbar");
+  
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      navBar.classList.toggle("menu-open");
+    });
+
+    document.querySelectorAll('.navlinks a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.navlinks').classList.remove('active');
+            document.querySelector('#navbar').classList.remove('menu-open');
+        });
+    });
+    </script>
+</body>
+</html>

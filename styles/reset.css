@@ -11,8 +11,8 @@
 
 /* Global Colors Palette */
 :root {
-    --mediumdark-red: #a40202;
-    --chrome-gold: #BBA53D;
+    --mediumdark-red: rgba(164, 2, 2, 1);
+    --chrome-gold: rgba(187, 165, 61, 1);
 }
 
 /* Global Scroll Behavior */
