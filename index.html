@@ -23,7 +23,7 @@
 
                 <!-- Page Options on the Right -->
                 <ul class="navlinks">
-                    <li><a href="#">About Me</a></li>
+                    <li><a href="#about">About Me</a></li>
                     <li><a href="#">Portfolio </a></li>
                     <li><a href="#">Photography</a></li>
                     <li><a href="#">Socials</a></li>
@@ -87,6 +87,19 @@
             hamburger.addEventListener("click", () => {
               navLinks.classList.toggle("active");
               navBar.classList.toggle("menu-open");
+            });
+
+            document.querySelectorAll('.navlinks a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.querySelector('.navlinks').classList.remove('active');
+                    document.querySelector('#navbar').classList.remove('menu-open');
+                });
+            });
+
+            document.querySelector('a[href="#about"]').addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default anchor behavior
+                const aboutSection = document.getElementById('about');
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
             });
           </script>
     </body>
