@@ -15,7 +15,7 @@
     </head>
     <body>
         <header>
-            <div class="navbar-container">
+            <div id="navbar">
                 <!-- Website Name on the Left -->
                 <div class="logo">
                     <a href="#">Rebel Courier Hub</a>
@@ -29,6 +29,9 @@
                     <li><a href="#">Socials</a></li>
                     <li><a href="#">Contact Me</a></li>
                 </ul>
+                <button class=hamburger aria-label="Toggle menu">
+                    ☰
+                </button>
             </div>
         </header>
         <main>
@@ -76,5 +79,15 @@
                 </footer>
             </section>
         </main>
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".navlinks");
+            const navBar = document.querySelector("#navbar");
+          
+            hamburger.addEventListener("click", () => {
+              navLinks.classList.toggle("active");
+              navBar.classList.toggle("menu-open");
+            });
+          </script>
     </body>
 </html>

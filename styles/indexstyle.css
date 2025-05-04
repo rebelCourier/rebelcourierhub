@@ -24,7 +24,7 @@ header {
     z-index: 1000;
 }
 
-.navbar-container {
+#navbar {
     display: flex;
     justify-content: space-between;
     background-color: black;
@@ -35,12 +35,14 @@ header {
 
 .logo {
     color: var(--mediumdark-red);
-    font-size: 25px;
+    font-size: 1.5rem;
+    line-height: 40px;
     font-family: 'RacingSansOne';
     padding-left: 40px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-size: clamp(1.25rem, 5vw, 2rem);
 }
 
 .logo:hover {
@@ -66,6 +68,10 @@ header {
 
 .navlinks li a:hover {
     color: var(--chrome-gold);
+}
+
+.hamburger {
+    display: none;
 }
 
 #home {
@@ -115,9 +121,7 @@ header {
     align-items: center;
     min-height: 100vh;
     justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 150px;
-    background-color: ;
+    padding-bottom: 175px;
 }
 
 #about .about-content h1 {
@@ -168,13 +172,15 @@ header {
 }
 
 #footer-container .tldr {
+    display: block;
     text-align: center;
-    font-size: x-small;
+    font-size: small;
     font-family: 'Montserrat';
-    padding: 10px 35px;
+    padding: 10px 50px;
     color: var(--mediumdark-red);
-    max-height: fit-content;
 }
+
+
 
 #footer-container .legal {
     display: flex;
@@ -210,4 +216,55 @@ header {
     color: var(--mediumdark-red);
     font-size: small;
     padding-top: 25px;
+}
+
+@media screen and (max-width: 900px) {
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    #navbar.menu-open {
+        border-bottom-right-radius: 0px;
+    }
+
+    .hamburger {
+        display: block;
+        color: var(--mediumdark-red);
+        padding: 0px 25px;
+        font-size: 2em;
+    }
+
+    .hamburger:hover {
+        color: var(--chrome-gold);
+    }
+
+    .navlinks {
+        display: none;
+        top: 100%;
+        width: fit-content;
+        position: absolute;
+        background-color: black;
+        right: 0;
+        padding: 0;
+        gap: 1rem;
+        border-bottom-left-radius: 25px;
+    }
+
+    .navlinks.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer-container .tldr {
+        display: none;
+    }
+    #footer-container .footer-logo {
+        padding-right: 50px;
+    }
+    #footer-container .legal {
+        padding-left: 50px;
+    }
 }
