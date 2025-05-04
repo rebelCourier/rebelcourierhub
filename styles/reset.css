@@ -1,6 +1,15 @@
+/* Global Font Selection */
+@font-face {
+    font-family: 'RacingSansOne';
+    src: url(../baseassets/fonts/RacingSansOne-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../baseassets/fonts/Montserrat-BlackItalic.ttf) format(truetype);
+}
+
 /* Global Colors Palette */
-
-
 :root {
     --mediumdark-red: #a40202;
     --chrome-gold: #BBA53D;

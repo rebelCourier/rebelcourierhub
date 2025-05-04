@@ -1,13 +1,3 @@
-@font-face {
-    font-family: 'RacingSansOne';
-    src: url(../baseassets/fonts/RacingSansOne-Regular.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: Montserrat;
-    src: url(../baseassets/fonts/Montserrat-BlackItalic.ttf) format(truetype);
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -278,7 +268,7 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-bottom: 100px;
+        padding-bottom: 4rem;
     }
 
     #about .about-content h1 {
