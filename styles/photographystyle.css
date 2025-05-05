@@ -1,0 +1,222 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 50px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+.logo {
+    color: var(--mediumdark-red);
+    font-size: 1.5rem;
+    line-height: 40px;
+    font-family: 'RacingSansOne';
+    padding-left: 40px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: clamp(1.25rem, 5vw, 2rem);
+}
+
+.logo:hover {
+    color: var(--chrome-gold);
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-right: 30px;
+}
+
+.navlinks li {
+    margin: 0px 15px;
+}
+
+.navlinks li a {
+    color: var(--mediumdark-red);
+    text-decoration: none;
+    font-family: 'RacingSansOne';
+}
+
+.navlinks li a:hover {
+    color: var(--chrome-gold);
+}
+
+.hamburger {
+    display: none;
+}
+
+#footer-container {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    padding: 10px 70px;
+    background-color: black;
+    border-radius: 100px 100px 0px 0px;
+}
+
+#footer-container .footer-logo {
+    width: 175px;
+}
+
+#footer-container .tldr {
+    display: block;
+    text-align: center;
+    font-size: 60%;
+    font-family: 'Montserrat';
+    padding: 10px 50px;
+    color: var(--mediumdark-red);
+}
+
+
+
+#footer-container .legal {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-container .legal .policies {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px;
+    font-family: 'RacingSansOne';
+    color: var(--mediumdark-red);
+    font-size: small;
+    padding-top: 25px;
+}
+
+#footer-container .legal .policies .privacy:hover {
+    color: var(--chrome-gold);
+}
+
+#footer-container .legal .policies .terms:hover {
+    color: var(--chrome-gold);
+}
+
+#footer-container .legal .policies .cookie:hover {
+    color: var(--chrome-gold);
+}
+
+#footer-container .legal .copyright {
+    font-family: 'RacingSansOne';
+    padding: 0px 10px;
+    color: var(--mediumdark-red);
+    font-size: small;
+    padding-top: 25px;
+}
+
+@media screen and (max-width: 900px) {
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    #navbar.menu-open {
+        border-bottom-right-radius: 0px;
+    }
+
+    .hamburger {
+        display: block;
+        color: var(--mediumdark-red);
+        padding: 0px 25px;
+        font-size: 2em;
+    }
+
+    .hamburger:hover {
+        color: var(--chrome-gold);
+    }
+
+    .navlinks {
+        display: none;
+        top: 100%;
+        width: fit-content;
+        position: absolute;
+        background-color: black;
+        right: 0;
+        padding: 5px 0px;
+        gap: .5rem;
+        border-bottom-left-radius: 20px;
+    }
+
+    .navlinks.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer-container {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        bottom: 0;
+        padding: 10px 70px;
+        background-color: black;
+        border-radius: 100px 100px 0px 0px;
+    }
+    
+    #footer-container .footer-logo {
+        width: 100px;
+        padding: 10px 0px;
+    }
+    
+    #footer-container .tldr {
+        display: none;
+    }
+    
+    #footer-container .legal {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+    
+    #footer-container .legal .policies {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        padding: 5px 20px;
+        font-family: 'RacingSansOne';
+        color: var(--mediumdark-red);
+        font-size: x-small;
+    }
+    
+    #footer-container .legal .policies .privacy:hover {
+        color: var(--chrome-gold);
+    }
+    
+    #footer-container .legal .policies .terms:hover {
+        color: var(--chrome-gold);
+    }
+    
+    #footer-container .legal .policies .cookie:hover {
+        color: var(--chrome-gold);
+    }
+    
+    #footer-container .legal .copyright {
+        font-family: 'RacingSansOne';
+        padding: 0px 10px;
+        color: var(--mediumdark-red);
+        font-size: x-small;
+        padding-top: 10px;
+    }
+}
