@@ -58,10 +58,85 @@ header {
     display: none;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 main {
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: url(../baseassets/background-photos/socialsbackground.jpg) no-repeat center center;
     background-size: cover;
+}
+
+#socials {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    max-height: 80vh;
+    padding: 75px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-areas: 
+    "instagram      twitter         threads"
+    "facebook       applemusic      spotify"
+    "youtube        tidalmusic      deezer";
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+#socials::-webkit-scrollbar {
+    display: none;
+}
+
+.instagram {
+    grid-area: instagram;
+    padding: 25px;
+}
+
+.twitter {
+    grid-area: twitter;
+    padding: 25px;
+}
+
+.threads {
+    grid-area: threads;
+    padding: 25px;
+}
+
+.facebook {
+    grid-area: facebook;
+    padding: 25px;
+}
+
+.applemusic {
+    grid-area: applemusic;
+    padding: 25px;
+}
+
+.spotify {
+    grid-area: spotify;
+    padding: 25px;
+}
+
+.youtube {
+    grid-area: youtube;
+}
+
+.tidalmusic {
+    grid-area: tidalmusic;
+}
+
+.deezer {
+    grid-area: deezer;
 }
 
 #footer-container {
@@ -165,6 +240,30 @@ main {
         flex-direction: column;
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        background: url(../baseassets/background-photos/socialsbackground.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    #socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 50px;
+        z-index: 2;
+    }
+
+    #socials > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+        flex-direction: column;
+    }
+
     #footer-container {
         width: 100%;
         position: absolute;
@@ -176,6 +275,7 @@ main {
         padding: 10px 70px;
         background-color: black;
         border-radius: 100px 100px 0px 0px;
+        z-index: 1;
     }
     
     #footer-container .footer-logo {

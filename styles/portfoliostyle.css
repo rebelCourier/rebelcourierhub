@@ -58,6 +58,12 @@ header {
     display: none;
 }
 
+main {
+    height: 100vh;
+    background: url(/baseassets/background-photos/portfoliobackground.jpg) no-repeat center center;
+    background-size: cover;
+}
+
 #footer-container {
     width: 100%;
     position: absolute;
@@ -82,8 +88,6 @@ header {
     padding: 10px 50px;
     color: var(--mediumdark-red);
 }
-
-
 
 #footer-container .legal {
     display: flex;
