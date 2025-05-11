@@ -92,6 +92,7 @@ h2 {
     padding: 20px;
     background-color: rgba(187, 165, 61, 0.5);
     border-radius: 20px;
+    gap: 10px;
 }
 
 .contact_form input::placeholder,
@@ -100,10 +101,11 @@ h2 {
     padding: 10px;
 }
 
-#your-email {
+#input-below {
     background-color: black;
     color: var(--mediumdark-red);
     padding: 10px;
+    text-align: center;
     border-radius: 20px;
     font-family: 'RacingSansOne';
 }

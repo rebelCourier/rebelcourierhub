@@ -37,10 +37,12 @@
     <main>
         <section class="contact_section">
             <h2>Contact Me</h2>
-            <form class="contact_form">
-                <label for="email" id="your-email">Your Email</label>
+            <form class="contact_form" action="https://formspree.io/f/xeogzzod" method="post">
+                <label for="email" id="input-below">Input Your Name, Email, and the Message You Want to Send Below.</label>
+
                 <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
                 <textarea name="message" id="message" rows="5" placeholder="Enter your message here..." required></textarea>
+                
                 <button id="send-message">Send Message</button>
             </form>
         </section>
